@@ -57,8 +57,8 @@ export const weddingConfig = {
       },
     ],
 
-    address: "Ishaar Staycation, Vijayawada, Andhra Pradesh, India",
-    mapsUrl: "",
+    address: "Ishaar Staycation, Chirravuru, Andhra Pradesh 522303, India",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ishaar&query_place_id=ChIJt3N6MQD7NToRT_eM6gPrnMk",
   },
 
   contact: {
