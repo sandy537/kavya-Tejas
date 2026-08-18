@@ -53,7 +53,7 @@ export const weddingConfig = {
         dateLabel: "27 August 2026",
         time: "11:41 PM",
         venue: "Ishaar Staycation, Vijayawada",
-        plates: ["/images/ceremonies/mahurtham.png"],
+        plates: ["/images/ceremonies/muhurtam.png"],
       },
     ],
 
@@ -71,11 +71,11 @@ export const weddingConfig = {
   },
 
   gallery: [
-    { src: "/images/gallery/couple-main.jpg", alt: "Kavya and Tejas together" },
-    { src: "/images/gallery/moment-02.jpg", alt: "Kavya and Tejas" },
-    { src: "/images/gallery/moment-03.jpg", alt: "Kavya and Tejas together" },
-    { src: "/images/gallery/moment-04.jpg", alt: "A candid moment of Kavya and Tejas" },
-    { src: "/images/gallery/moment-05.jpg", alt: "Kavya and Tejas" },
+    { src: "/images/gallery/couple.jpeg", alt: "Kavya and Tejas together" },
+    { src: "/images/ceremonies/haldi.png", alt: "Kavya and Tejas at Haldi" },
+    { src: "/images/ceremonies/reception.png", alt: "Kavya and Tejas Reception" },
+    { src: "/images/ceremonies/muhurtam.png", alt: "Kavya and Tejas Muhurtham" },
+    { src: "/images/envelope/main.jpg", alt: "Kavya and Tejas wedding invitation" },
   ],
 
   site: {
