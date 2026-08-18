@@ -1,121 +1,85 @@
 /**
- * ─────────────────────────────────────────────────────────────────────────
- *  THE ONLY FILE YOU NEED TO EDIT TO CHANGE THE WEDDING DETAILS.
- * ─────────────────────────────────────────────────────────────────────────
- *
- *  Everything the invitation shows - names, parents, dates, venue, photos,
- *  music, RSVP number - is read from here. No component hardcodes any of it.
- *
- *  Fields written as "ADD ..." are intentional placeholders: replace the text
- *  and the site picks it up. Photo paths point at /public/images/... - drop
- *  files with those names in and they appear automatically; until then an
- *  ornamental frame is shown in their place.
+ * Wedding invitation data for Kavya & Tejas.
+ * Edit this file to change the invitation details.
  */
 
 export const weddingConfig = {
-  /** The couple together — shown in a single frame in the "Beloved" scene. */
   couplePhoto: "/images/couple/couple.jpeg",
 
   groom: {
-    name: "Kirana K R",
-    shortName: "Kirana K R",
-    /** Shown full-bleed in his own scene. Faces are never cropped or retouched. */
+    name: "Tejas",
+    shortName: "Tejas",
     photo: "/images/couple/groom.jpg",
   },
 
   bride: {
-    name: "Anusha T S",
-    shortName: "Anusha T S",
+    name: "Kavya",
+    shortName: "Kavya",
     photo: "/images/couple/bride.jpg",
   },
 
   wedding: {
-    /** ISO 8601 with the India offset - drives the countdown. */
-    dateISO: "2026-08-31T10:00:00+05:30",
-    dayName: "Monday",
-    dateLabel: "31 August 2026",
-    /** Set the muhurtham time here; it also drives the countdown above. */
-    time: "9:30 AM to 10:30 AM",
-    ceremony: "Wedding Ceremony",
-    venue: "Matha Convention Hall, KB Cross, Tiptur Taluk, Tumkur District",
+    /** India time; drives the main countdown. */
+    dateISO: "2026-08-27T11:41:00+05:30",
+    dayName: "Thursday",
+    dateLabel: "27 August 2026",
+    time: "11:41 AM",
+    ceremony: "Muhurtham / Wedding Ceremony",
+    venue: "Ishaar Staycation, Vijayawada",
 
-    /**
-     * The celebrations, in order — each one gets its own full-screen scene.
-     *
-     * Every detail is announced ONCE, in the scene it belongs to, and nowhere
-     * else on the page. Leave a field blank and it is simply not drawn, so an
-     * hour or a hall that has not been settled yet can be added later without
-     * touching a component.
-     *
-     * `key` selects the scene's palette and its line of copy in content.ts —
-     * adding a fourth ceremony means adding both.
-     */
     events: [
       {
         key: "haldi",
-        name: "Pre-Wedding Celebrations",
-        dayName: "Friday",
-        dateLabel: "28 August 2026",
-        time: "",
-        venue: "",
-        /** The artwork for this day. Each plate carries its own name, date and
-            hour painted in, so the scene shows them and letters nothing over
-            the top — swapping a file is how you change what the scene says.
-            Two plates here because Haldi and Mehendi share the 28th; the scene
-            fans them apart rather than giving one day two screens. */
-        plates: [
-          "/images/ceremonies/haldi.png",
-          "/images/ceremonies/mehandi.png",
-        ],
+        name: "Haldi",
+        dayName: "Thursday",
+        dateLabel: "27 August 2026",
+        time: "10:30 AM",
+        venue: "Ishaar Staycation, Vijayawada",
+        plates: ["/images/ceremonies/haldi.png"],
       },
       {
         key: "reception",
         name: "Reception",
-        dayName: "Sunday",
-        dateLabel: "30 August 2026",
-        time: "7:00 PM onwards",
-        venue: "Matha Convention Hall, KB Cross, Tiptur Taluk, Tumkur District",
+        dayName: "Thursday",
+        dateLabel: "27 August 2026",
+        time: "6:00 PM",
+        venue: "Ishaar Staycation, Vijayawada",
         plates: ["/images/ceremonies/reception.png"],
       },
       {
         key: "muhurtham",
         name: "Muhurtham",
-        dayName: "Monday",
-        dateLabel: "31 August 2026",
-        time: "9:30 AM – 10:30 AM",
-        /* Blank: the same hall as the reception, and the venue scene that
-           follows carries the full address and the map. */
-        venue: "",
+        dayName: "Thursday",
+        dateLabel: "27 August 2026",
+        time: "11:41 AM",
+        venue: "Ishaar Staycation, Vijayawada",
         plates: ["/images/ceremonies/mahurtham.png"],
       },
     ],
-    address: "KB Cross Tipture Tq, Tumkur Dist, Karnataka",
-    mapsUrl: "https://maps.app.goo.gl/f3JYBa2PGtV6b1jo7",
+
+    address: "Ishaar Staycation, Vijayawada, Andhra Pradesh, India",
+    mapsUrl: "",
   },
 
   contact: {
-    /** Digits only with country code, e.g. "919876543210". Currently unused —
-        kept for a future RSVP or "message us" link. */
     whatsapp: "",
   },
 
   music: {
     enabled: true,
-    /** Background track for the invitation. */
     source: "/music/marriagesong.mp3",
   },
 
   gallery: [
-    { src: "/images/gallery/couple-main.jpg", alt: "Kirana and Anusha together" },
-    { src: "/images/gallery/moment-02.jpg", alt: "The couple during their pre-wedding shoot" },
-    { src: "/images/gallery/moment-03.jpg", alt: "Kirana and Anusha hand in hand" },
-    { src: "/images/gallery/moment-04.jpg", alt: "A candid moment between the couple" },
-    { src: "/images/gallery/moment-05.jpg", alt: "The couple in traditional attire" },
+    { src: "/images/gallery/couple-main.jpg", alt: "Kavya and Tejas together" },
+    { src: "/images/gallery/moment-02.jpg", alt: "Kavya and Tejas" },
+    { src: "/images/gallery/moment-03.jpg", alt: "Kavya and Tejas together" },
+    { src: "/images/gallery/moment-04.jpg", alt: "A candid moment of Kavya and Tejas" },
+    { src: "/images/gallery/moment-05.jpg", alt: "Kavya and Tejas" },
   ],
 
   site: {
-    url: "https://kiranaanusha.vercel.app",
-    /* Share card is generated by src/app/opengraph-image.tsx. */
+    url: "",
   },
 } as const;
 
