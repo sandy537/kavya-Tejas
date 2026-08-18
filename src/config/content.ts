@@ -68,9 +68,9 @@ const en = {
     ceremony: "Wedding Ceremony",
   },
   ceremonies: {
-    eyebrow: "The Celebrations",
-    title: "Three Days, One Beginning",
-    lead: "Each day carries its own colour and its own hour. Come to as many as you can.",
+    eyebrow: "One Auspicious Day",
+    title: "One Day. Three Celebrations. One Forever.",
+    lead: "From haldi to the evening welcome and the sacred muhurtham, every celebration unfolds on the same beautiful day.",
     notes: {
       haldi: "Turmeric on our hands, laughter in the courtyard, and the blessings of everyone we love.",
       reception: "An evening to greet you, to feed you, and to celebrate before the vows.",
@@ -174,9 +174,9 @@ const kn: typeof en = {
     ceremony: "ವಿವಾಹ ಸಮಾರಂಭ",
   },
   ceremonies: {
-    eyebrow: "ಸಂಭ್ರಮ",
-    title: "ಮೂರು ದಿನ, ಒಂದು ಆರಂಭ",
-    lead: "ಪ್ರತಿ ದಿನಕ್ಕೂ ತನ್ನದೇ ಬಣ್ಣ, ತನ್ನದೇ ಘಳಿಗೆ. ಸಾಧ್ಯವಾದಷ್ಟು ಸಂಭ್ರಮಗಳಿಗೆ ಬನ್ನಿ.",
+    eyebrow: "ಒಂದು ಶುಭ ದಿನ",
+    title: "ಒಂದೇ ದಿನ. ಮೂರು ಸಂಭ್ರಮಗಳು. ಒಂದು ಶಾಶ್ವತ ಬಂಧ.",
+    lead: "ಅರಿಶಿನದ ಸಂಭ್ರಮದಿಂದ ಸಂಜೆ ಸ್ವಾಗತದವರೆಗೆ, ಪವಿತ್ರ ಮುಹೂರ್ತದವರೆಗೆ — ನಮ್ಮ ಎಲ್ಲಾ ಸಂಭ್ರಮಗಳು ಒಂದೇ ಸುಂದರ ದಿನದಲ್ಲಿ.",
     notes: {
       haldi: "ಕೈಗಳಲ್ಲಿ ಅರಿಶಿನ, ಅಂಗಳದಲ್ಲಿ ನಗು, ಮತ್ತು ಪ್ರೀತಿಪಾತ್ರರೆಲ್ಲರ ಆಶೀರ್ವಾದ.",
       reception: "ನಿಮ್ಮನ್ನು ಬರಮಾಡಿಕೊಂಡು, ಜೊತೆಯಾಗಿ ಸಂಭ್ರಮಿಸುವ ಸಂಜೆ.",
