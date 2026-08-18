@@ -30,9 +30,10 @@ const kannada = Noto_Sans_Kannada({
 const title = `${weddingConfig.groom.shortName} & ${weddingConfig.bride.shortName} — Wedding Invitation`;
 const description =
   "With joy in our hearts, we invite you to celebrate our wedding.";
+const siteUrl = "https://kavya-tejas.vercel.app";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(weddingConfig.site.url),
+  metadataBase: new URL(siteUrl),
   title,
   description,
   applicationName: title,
@@ -40,14 +41,14 @@ export const metadata: Metadata = {
     "wedding invitation",
     weddingConfig.groom.shortName,
     weddingConfig.bride.shortName,
-    "Kerala wedding",
+    "Andhra wedding",
     weddingConfig.wedding.venue,
   ],
   openGraph: {
     title,
     description,
     type: "website",
-    url: weddingConfig.site.url,
+    url: siteUrl,
     siteName: title,
     // The share image comes from app/opengraph-image.tsx, so it is always
     // generated and always matches wedding.ts. Setting `images` here would
