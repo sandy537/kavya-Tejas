@@ -38,6 +38,15 @@ export function FloatingControls() {
     window.setTimeout(() => setShareNote(false), 2400);
   };
 
+  const nextLanguage = () => {
+    if (language === "en") return setLanguage("kn");
+    if (language === "kn") return setLanguage("te");
+    return setLanguage("en");
+  };
+
+  const nextLanguageLabel =
+    language === "en" ? "ಕನ್ನಡ" : language === "kn" ? "తెలుగు" : "English";
+
   const btn =
     "grid h-10 w-10 place-items-center rounded-full border border-gold/35 bg-paper/85 text-gold-deep shadow-[0_6px_18px_-8px_rgba(58,38,18,0.5)] backdrop-blur transition-colors hover:bg-paper hover:text-gold";
 
@@ -66,13 +75,13 @@ export function FloatingControls() {
 
       <button
         type="button"
-        onClick={() => setLanguage(language === "en" ? "kn" : "en")}
+        onClick={nextLanguage}
         className={btn}
         aria-label={t.ui.language}
-        title={t.ui.language}
+        title={`${t.ui.language} — ${nextLanguageLabel}`}
       >
         <Languages className="h-4 w-4" aria-hidden="true" />
-        <span className="sr-only">{language === "en" ? "ಕನ್ನಡ" : "English"}</span>
+        <span className="sr-only">Switch to {nextLanguageLabel}</span>
       </button>
 
       <button type="button" onClick={share} className={btn} aria-label={t.final.share} title={t.final.share}>
@@ -89,14 +98,25 @@ export function FloatingControls() {
 /** Compact language pill shown on the sealed envelope, before controls appear. */
 export function SealedLanguageToggle() {
   const { language, setLanguage, t } = useInvitation();
+
+  const nextLanguage = () => {
+    if (language === "en") return setLanguage("kn");
+    if (language === "kn") return setLanguage("te");
+    return setLanguage("en");
+  };
+
+  const nextLanguageLabel =
+    language === "en" ? "ಕನ್ನಡ" : language === "kn" ? "తెలుగు" : "English";
+
   return (
     <button
       type="button"
-      onClick={() => setLanguage(language === "en" ? "kn" : "en")}
+      onClick={nextLanguage}
       className="label-caps absolute right-4 top-4 z-30 rounded-full border border-gold/40 px-3 py-1.5 text-[0.55rem] text-gold-deep/90 backdrop-blur-sm transition-colors hover:border-gold hover:text-gold sm:right-6 sm:top-6"
       aria-label={t.ui.language}
+      title={`${t.ui.language} — ${nextLanguageLabel}`}
     >
-      {language === "en" ? "ಕನ್ನಡ" : "English"}
+      {language === "en" ? "ಕನ್ನಡ" : language === "kn" ? "తెలుగు" : "English"}
     </button>
   );
 }
