@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { Volume2 } from "lucide-react";
 import { useInvitation } from "@/components/providers/InvitationProvider";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -19,7 +20,38 @@ export function SaptapadiSection() {
   const { t } = useInvitation();
   const reduce = useReducedMotion();
   const [active, setActive] = useState(0);
+  const [speaking, setSpeaking] = useState(false);
   const vow = t.saptapadi.vows[active];
+
+  useEffect(() => {
+    return () => {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  const speakVow = (index: number) => {
+    setActive(index);
+
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+
+    window.speechSynthesis.cancel();
+
+    const selected = t.saptapadi.vows[index];
+    const utterance = new SpeechSynthesisUtterance(
+      `Step ${index + 1}. ${selected.title}. ${selected.meaning}`
+    );
+    utterance.lang = "en-IN";
+    utterance.rate = 0.88;
+    utterance.pitch = 0.96;
+    utterance.volume = 1;
+    utterance.onstart = () => setSpeaking(true);
+    utterance.onend = () => setSpeaking(false);
+    utterance.onerror = () => setSpeaking(false);
+
+    window.speechSynthesis.speak(utterance);
+  };
 
   return (
     <section
@@ -70,9 +102,9 @@ export function SaptapadiSection() {
                 <button
                   key={i}
                   type="button"
-                  aria-label={`${i + 1}. ${t.saptapadi.vows[i].title}`}
+                  aria-label={`Step ${i + 1}. ${t.saptapadi.vows[i].title}. Tap to hear the meaning.`}
                   aria-pressed={selected}
-                  onClick={() => setActive(i)}
+                  onClick={() => speakVow(i)}
                   className="group absolute -translate-x-1/2 -translate-y-1/2 rounded-full p-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e3c889]"
                   style={pos}
                 >
@@ -92,8 +124,10 @@ export function SaptapadiSection() {
 
           <Reveal delay={0.15}>
             <div className="mx-auto mt-4 flex w-fit items-center gap-3 rounded-full border border-[#c9a968]/15 bg-white/[0.02] px-4 py-2 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#e2c582] shadow-[0_0_10px_rgba(226,197,130,0.7)]" />
-              <p className="text-[0.56rem] uppercase tracking-[0.2em] text-[#d5c49c]/58">{t.saptapadi.instruction}</p>
+              <Volume2 className={`h-3.5 w-3.5 text-[#e2c582] ${speaking ? "animate-pulse" : ""}`} aria-hidden="true" />
+              <p className="text-[0.56rem] uppercase tracking-[0.2em] text-[#d5c49c]/58">
+                {speaking ? "Listening…" : "Tap a star to hear its meaning"}
+              </p>
             </div>
           </Reveal>
         </div>
