@@ -35,7 +35,6 @@ const en = {
   couple: {
     eyebrow: "The Beloved",
   },
-  /** Titles for the two portrait scenes. */
   people: {
     groom: "The Groom",
     bride: "The Bride",
@@ -68,24 +67,19 @@ const en = {
     title: "Timeline",
     ceremony: "Wedding Ceremony",
   },
-  /** One line per ceremony, keyed by `event.key` in wedding.ts. Nothing here
-      repeats a name, a date or a venue — those live in the config and are
-      shown once, in their own scene. */
   ceremonies: {
     eyebrow: "The Celebrations",
     title: "Three Days, One Beginning",
     lead: "Each day carries its own colour and its own hour. Come to as many as you can.",
     notes: {
-      haldi:
-        "Turmeric on our hands, laughter in the courtyard, and the blessings of everyone we love.",
-      reception:
-        "An evening to greet you, to feed you, and to celebrate before the vows.",
+      haldi: "Turmeric on our hands, laughter in the courtyard, and the blessings of everyone we love.",
+      reception: "An evening to greet you, to feed you, and to celebrate before the vows.",
       muhurtham: "The hour the knot is tied. Be with us as we begin.",
     },
   },
   countdown: {
     eyebrow: "Counting the days",
-    title: "Until We Say Yes",
+    title: "Counting Down to Our Forever",
     days: "Days",
     hours: "Hours",
     minutes: "Minutes",
@@ -108,8 +102,7 @@ const en = {
     send: "Send RSVP on WhatsApp",
     namePlaceholder: "Your name",
     thanks: "Thank you — your response opens WhatsApp.",
-    unconfigured:
-      "RSVP by WhatsApp becomes active once a number is added in wedding.ts.",
+    unconfigured: "RSVP by WhatsApp becomes active once a number is added in wedding.ts.",
     messages: {
       yes: "will joyfully attend",
       no: "is unable to attend",
@@ -118,7 +111,6 @@ const en = {
   },
   final: {
     together: "Together with our families, we invite you to celebrate our special day.",
-    /** The farewell. Deliberately says nothing the ceremony scenes have said. */
     awaiting: "Come and bless us. Your being there is what will make these days ours.",
     withLove: "With Love",
     share: "Share Invitation",
@@ -193,49 +185,48 @@ const kn: typeof en = {
   },
   countdown: {
     eyebrow: "ದಿನಗಣನೆ",
-    title: "ಶುಭ ಘಳಿಗೆಗೆ",
+    title: "ನಮ್ಮ ಶಾಶ್ವತದತ್ತ ದಿನಗಣನೆ",
     days: "ದಿನಗಳು",
     hours: "ಗಂಟೆಗಳು",
     minutes: "ನಿಮಿಷಗಳು",
     seconds: "ಸೆಕೆಂಡುಗಳು",
-    passed: "ನಾವು ವಿವಾಹಿತರಾಗಿದ್ದೇವೆ — ನಮ್ಮೊಂದಿಗೆ ಸಂಭ್ರಮಿಸಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು.",
-    today: "ಇಂದೇ ಆ ಶುಭದಿನ.",
+    passed: "ನಾವು ವಿವಾಹಿತರಾಗಿದ್ದೇವೆ — ನಮ್ಮೊಂದಿಗೆ ಸಂಭ್ರಮಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು.",
+    today: "ಇಂದು ಆ ಶುಭ ದಿನ.",
   },
   venue: {
     eyebrow: "ಸ್ಥಳ",
-    title: "ನಮ್ಮನ್ನು ಇಲ್ಲಿ ಭೇಟಿಯಾಗಿ",
+    title: "ನಮ್ಮನ್ನು ಇಲ್ಲಿ ಕಂಡುಕೊಳ್ಳಿ",
     directions: "ನಕ್ಷೆಯಲ್ಲಿ ತೆರೆಯಿರಿ",
   },
   rsvp: {
-    eyebrow: "ದಯವಿಟ್ಟು ತಿಳಿಸಿ",
-    title: "ನೀವು ಬರುತ್ತೀರಾ?",
-    subtitle: "ನಿಮ್ಮ ಉಪಸ್ಥಿತಿ ನಮಗೆ ಅಮೂಲ್ಯ.",
-    yes: "ಖಂಡಿತ ಬರುತ್ತೇನೆ",
-    no: "ಬರಲಾಗುವುದಿಲ್ಲ",
-    maybe: "ಪ್ರಯತ್ನಿಸುತ್ತೇನೆ",
-    send: "ವಾಟ್ಸ್ಆ್ಯಪ್‌ನಲ್ಲಿ ಕಳುಹಿಸಿ",
+    eyebrow: "ದಯವಿಟ್ಟು ಪ್ರತಿಕ್ರಿಯಿಸಿ",
+    title: "ನಮ್ಮೊಂದಿಗೆ ಸೇರುತ್ತೀರಾ?",
+    subtitle: "ನಿಮ್ಮ ಉಪಸ್ಥಿತಿ ನಮಗೆ ಅತ್ಯಂತ ಅಮೂಲ್ಯ.",
+    yes: "ಹಾಜರಾಗುತ್ತೇನೆ",
+    no: "ಹಾಜರಾಗಲು ಸಾಧ್ಯವಿಲ್ಲ",
+    maybe: "ಬಹುಶಃ",
+    send: "WhatsApp ಮೂಲಕ RSVP ಕಳುಹಿಸಿ",
     namePlaceholder: "ನಿಮ್ಮ ಹೆಸರು",
-    thanks: "ಧನ್ಯವಾದಗಳು — ವಾಟ್ಸ್ಆ್ಯಪ್ ತೆರೆಯುತ್ತದೆ.",
-    unconfigured: "wedding.ts ನಲ್ಲಿ ಸಂಖ್ಯೆ ಸೇರಿಸಿದ ನಂತರ ಇದು ಸಕ್ರಿಯವಾಗುತ್ತದೆ.",
+    thanks: "ಧನ್ಯವಾದಗಳು — ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ WhatsApp ತೆರೆಯುತ್ತದೆ.",
+    unconfigured: "wedding.ts ನಲ್ಲಿ ಸಂಖ್ಯೆಯನ್ನು ಸೇರಿಸಿದ ನಂತರ WhatsApp RSVP ಸಕ್ರಿಯವಾಗುತ್ತದೆ.",
     messages: {
-      yes: "ಸಂತೋಷದಿಂದ ಭಾಗವಹಿಸುತ್ತಾರೆ",
-      no: "ಭಾಗವಹಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
-      maybe: "ಭಾಗವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಾರೆ",
+      yes: "ಸಂತೋಷದಿಂದ ಹಾಜರಾಗುತ್ತಾರೆ",
+      no: "ಹಾಜರಾಗಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ",
+      maybe: "ಹಾಜರಾಗಲು ಪ್ರಯತ್ನಿಸುತ್ತಾರೆ",
     },
   },
   final: {
-    together: "ನಮ್ಮ ಕುಟುಂಬಗಳೊಂದಿಗೆ, ಈ ವಿಶೇಷ ದಿನವನ್ನು ಸಂಭ್ರಮಿಸಲು ನಿಮ್ಮನ್ನು ಆಹ್ವಾನಿಸುತ್ತೇವೆ.",
-    awaiting: "ಬಂದು ಆಶೀರ್ವದಿಸಿ. ನಿಮ್ಮ ಉಪಸ್ಥಿತಿಯೇ ಈ ದಿನಗಳಿಗೆ ಸಾರ್ಥಕತೆ.",
+    together: "ನಮ್ಮ ಕುಟುಂಬಗಳೊಂದಿಗೆ, ನಮ್ಮ ವಿಶೇಷ ದಿನವನ್ನು ಸಂಭ್ರಮಿಸಲು ನಿಮ್ಮನ್ನು ಆಹ್ವಾನಿಸುತ್ತೇವೆ.",
+    awaiting: "ಬಂದು ನಮ್ಮನ್ನು ಆಶೀರ್ವದಿಸಿ. ನಿಮ್ಮ ಉಪಸ್ಥಿತಿಯೇ ಈ ದಿನಗಳನ್ನು ನಮ್ಮದಾಗಿಸುತ್ತದೆ.",
     withLove: "ಪ್ರೀತಿಯಿಂದ",
     share: "ಆಹ್ವಾನ ಹಂಚಿಕೊಳ್ಳಿ",
-    shared: "ಲಿಂಕ್ ನಕಲಾಗಿದೆ",
+    shared: "ಲಿಂಕ್ ನಕಲಿಸಲಾಗಿದೆ",
   },
   ui: {
-    musicOn: "ಸಂಗೀತ ಆಫ್ ಮಾಡಿ",
+    musicOn: "ಸಂಗೀತ ನಿಲ್ಲಿಸಿ",
     musicOff: "ಸಂಗೀತ ಆನ್ ಮಾಡಿ",
     language: "ಭಾಷೆ ಬದಲಿಸಿ",
   },
 };
 
-export const weddingContent = { en, kn };
-export type Content = typeof en;
+export const content: Record<Language, typeof en> = { en, kn };
