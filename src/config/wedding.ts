@@ -20,10 +20,10 @@ export const weddingConfig = {
 
   wedding: {
     /** India time; drives the main countdown. */
-    dateISO: "2026-08-27T11:41:00+05:30",
+    dateISO: "2026-08-27T23:41:00+05:30",
     dayName: "Thursday",
     dateLabel: "27 August 2026",
-    time: "11:41 AM",
+    time: "11:41 PM",
     ceremony: "Muhurtham / Wedding Ceremony",
     venue: "Ishaar Staycation, Vijayawada",
 
@@ -51,7 +51,7 @@ export const weddingConfig = {
         name: "Muhurtham",
         dayName: "Thursday",
         dateLabel: "27 August 2026",
-        time: "11:41 AM",
+        time: "11:41 PM",
         venue: "Ishaar Staycation, Vijayawada",
         plates: ["/images/ceremonies/mahurtham.png"],
       },
