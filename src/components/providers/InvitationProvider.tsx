@@ -12,7 +12,7 @@ import {
   type ReactNode,
 } from "react";
 import { weddingConfig } from "@/config/wedding";
-import { weddingContent, type Content, type Language } from "@/config/content";
+import { content, type Language } from "@/config/content";
 
 interface InvitationState {
   /** False until the guest opens the envelope; the page is locked until then. */
@@ -20,7 +20,7 @@ interface InvitationState {
   open: () => void;
   language: Language;
   setLanguage: (next: Language) => void;
-  t: Content;
+  t: (typeof content)[Language];
   musicOn: boolean;
   toggleMusic: () => void;
   musicAvailable: boolean;
@@ -231,7 +231,7 @@ export function InvitationProvider({ children }: { children: ReactNode }) {
       open,
       language,
       setLanguage,
-      t: weddingContent[language],
+      t: content[language],
       musicOn,
       toggleMusic,
       musicAvailable: musicAvailable || musicOn,
