@@ -35,8 +35,8 @@ const MUTE_KEY = "wedding:muted";
  * Language lives in a tiny external store rather than in an effect.
  *
  * `useSyncExternalStore` renders the server snapshot ("en") during hydration
- * and then reconciles to the stored choice, which is exactly the behaviour we
- * want: no hydration mismatch, and no setState-inside-an-effect.
+ * and then reconciles to the stored choice, which is exactly the behaviour
+ * we want: no hydration mismatch, and no setState-inside-an-effect.
  */
 const languageStore = {
   listeners: new Set<() => void>(),
@@ -47,7 +47,7 @@ const languageStore = {
     let value: Language = "en";
     try {
       const saved = window.localStorage.getItem(LANG_KEY);
-      if (saved === "en" || saved === "kn") value = saved;
+      if (saved === "en" || saved === "kn" || saved === "te") value = saved;
     } catch {
       /* private mode - keep the default */
     }
