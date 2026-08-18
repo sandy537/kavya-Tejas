@@ -1,0 +1,3 @@
+Design note: The Saptapadi scene intentionally replaces the tall blessing tile with an interactive premium layout. Seven star controls are positioned around a restrained orbital center; selecting any star updates the Sanskrit phrase, transliteration, title, and plain-English meaning. The copy explicitly tells guests to tap the stars, solving the discoverability issue.
+
+Mandap direction: keep ceremony plates as the supplied artwork and avoid a literal vector mandap. The surrounding interaction should feel like a luxury editorial installation: restrained gold lines, deep black ground, soft glow, slow orbital motion, generous but controlled spacing, and no oversized empty vertical tile.
