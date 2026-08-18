@@ -9,7 +9,7 @@ A cinematic, mobile-first digital wedding invitation.
 - **Date:** 27 August 2026
 - **Haldi:** 10:30 AM
 - **Reception:** 6:00 PM
-- **Muhurtham / Wedding:** 11:41 AM
+- **Muhurtham / Wedding:** 11:41 PM
 - **Venue:** Ishaar Staycation, Vijayawada
 
 ## Development
